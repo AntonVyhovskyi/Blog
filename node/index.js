@@ -50,7 +50,7 @@ app.post('/auth/register', registerValidator, handleValidationErrors, UserContol
 app.post('/auth/login', loginValidator, handleValidationErrors, UserContoller.login)
 app.get('/auth/me', checkAuth, UserContoller.getMe)
 app.get('/user/:userId', UserContoller.getUser)
-app.patch('/user/:userId',  userUpdateValidator, handleValidationErrors, checkAuth, UserContoller.updateUser)
+app.patch('/user/:userId', checkAuth, userUpdateValidator, handleValidationErrors,  UserContoller.updateUser)
 
 
 
