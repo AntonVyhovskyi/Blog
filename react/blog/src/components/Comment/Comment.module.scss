@@ -1,0 +1,163 @@
+.container {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+
+    @media (max-width:800px) {
+                
+        padding: 8px;
+    }
+
+    @media (max-width:650px) {
+        
+        padding: 6px;
+    }
+
+    @media (max-width:550px) {
+        
+        padding: 5px;
+    }
+
+
+    .avatar {
+        height: 75px;
+        max-width: 75px;
+        min-width: 75px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        @media (max-width:800px) {
+
+            height: 65px;
+            max-width: 65px;
+            min-width: 65px;
+        }
+
+        @media (max-width:650px) {
+
+            height: 55px;
+            max-width: 55px;
+            min-width: 55px;
+        }
+
+        @media (max-width:550px) {
+
+            height: 45px;
+            max-width: 45px;
+            min-width: 45px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    .right {
+        display: flex;
+        gap: 10px;
+
+        flex-direction: column;
+        width: 100%;
+
+        @media (max-width:800px) {
+            padding-bottom: 13px;
+            margin-bottom: 13px;
+            gap: 9px;
+        }
+
+        @media (max-width:650px) {
+            padding-bottom: 11px;
+            margin-bottom: 11px;
+            gap: 8px;
+        }
+
+        @media (max-width:550px) {
+            padding-bottom: 9px;
+            margin-bottom: 9px;
+            gap: 7px;
+        }
+
+        .name {
+            padding-top: 5px;
+            font-weight: 500;
+            font-size: 18px;
+
+            @media (max-width:800px) {
+                
+                font-size: 17px;
+            }
+
+            @media (max-width:650px) {
+                
+                font-size: 16px;
+            }
+
+            @media (max-width:550px) {
+                
+                font-size: 15px;
+            }
+
+        }
+
+        .text {
+            @media (max-width:800px) {
+
+                font-size: 17px;
+            }
+
+            @media (max-width:650px) {
+
+                font-size: 16px;
+            }
+
+            @media (max-width:550px) {
+
+                font-size: 15px;
+            }
+        }
+
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid gray;
+
+
+    }
+
+    &:hover {
+        box-shadow: 0 0 5px rgba(128, 128, 128, 0.327);
+
+        .delete {
+            button {
+                img {
+                    transform: translate(0);
+                }
+            }
+        }
+    }
+
+    .delete {
+        overflow: hidden;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        button {
+            height: 10px;
+            width: 10px;
+
+            img {
+                transition: transform 0.3s;
+                transform: translate(20px);
+                width: 100%;
+            }
+        }
+    }
+
+}
